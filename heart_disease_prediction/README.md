@@ -1,4 +1,4 @@
-# ❤️ Heart Disease Prediction - Task 3
+# ❤️ Task 3: Heart Disease Prediction 
 
 ## 🎯 Objective
 Build a machine learning model to predict whether a person is at risk of heart disease based on health data.
@@ -86,4 +86,3 @@ Run the script:
 python main.py
 
 ---
-
