@@ -1,20 +1,39 @@
 # AI-ML-Internship-Tasks
 
-## 📌 Overview
-This repository contains my completed AI/ML internship projects.  
-It includes tasks on data exploration, visualization, regression, classification, and other machine learning concepts.
+📌 ## Overview
 
-Each task contains:  
-- Python script (`.py`)  
-- Dataset (or dataset link if too large)  
-- Output plots saved in `outputs/` folder
-- heart.csv file
-- README-style markdown summary with objectives, steps, models, and results  
+This repository contains my completed AI/ML internship tasks.  
+These projects demonstrate my skills in:
+
+- Data analysis and visualization  
+- Machine learning model development  
+- Prediction systems using regression and classification  
+- Prompt engineering and AI chatbot development using LLMs  
+
+Each task includes:
+
+- Python script (.py)
+- Dataset (or dataset link)
+- Output visualizations (if applicable)
+- README documentation
 
 ---
 
-## 📂 Folder Structure
+# 🛠 Tools & Technologies Used
 
+- Python 3.x
+- Pandas, NumPy
+- Matplotlib, Seaborn
+- Scikit-learn
+- yfinance
+- OpenAI Agents SDK
+- Gemini LLM (gemini-2.5-flash)
+- dotenv, os
+- Prompt Engineering
+
+---
+
+# 📂 Folder Structure
 
 AI-ML-Internship-Tasks/
 │
@@ -22,7 +41,7 @@ AI-ML-Internship-Tasks/
 │ ├── main.py
 │ ├── outputs/
 │ └── README.md
-│  
+│
 ├── Task-2_Stock_Price_Prediction/
 │ ├── main.py
 │ ├── outputs/
@@ -31,129 +50,246 @@ AI-ML-Internship-Tasks/
 ├── Task-3_Heart_Disease_Prediction/
 │ ├── main.py
 │ ├── outputs/
-│ └── heart.csv
+│ ├── heart.csv
 │ └── README.md
 │
-├── Task-4_...
-├── Task-5_...
-└── Task-6_...
+├── Task-4_General_Health_Query_Chatbot/
+│ ├── chatbot.py
+│ └── README.md
+│
+└── README.md\
 
 
 ---
 
-## 🛠 Tools & Libraries
-- Python 3.x  
-- Pandas, NumPy  
-- Matplotlib, Seaborn  
-- Scikit-learn  
-- yfinance (for stock prediction)
+# 📋 Tasks Details
 
 ---
 
-## 📋 Tasks Summary
+# 🌸 Task 1 – Iris Dataset Exploration & Visualization
 
-### Task 1 – Iris Dataset Exploration & Visualization
-**Objective:** Explore, analyze, and visualize the Iris dataset to understand feature distributions and relationships.  
+## 🎯 Goal
 
-**Key Steps:**  
-- Load dataset (`seaborn.load_dataset("iris")`)  
-- Inspect dataset (`.head()`, `.info()`, `.describe()`)  
-- Visualize:  
-  - Scatter plot → Sepal relationships  
-  - Histogram → Feature distributions  
-  - Box plot → Outlier detection  
-- Save plots in `outputs/` folder  
+Explore and visualize the Iris dataset to understand feature distributions, relationships, and patterns.
 
-**Insights:**  
-- Setosa species is clearly separable from others  
-- Petal features are strong predictors for classification  
+## 🧠 Skills Learned
 
----
+- Data loading and inspection
+- Data visualization
+- Exploratory Data Analysis (EDA)
+- Feature analysis
 
-### Task 2 – Stock Price Prediction
-**Objective:** Predict next-day stock closing price using historical data.  
+## 🛠 Tools Used
 
-**Key Steps:**  
-- Load historical stock data using `yfinance`  
-- Prepare features: Open, High, Low, Volume  
-- Create target: Next-day Close price  
-- Train Linear Regression model  
-- Evaluate predictions with Mean Absolute Error (MAE)  
-- Plot actual vs predicted prices and save in `outputs/` folder  
+- Python
+- Pandas
+- Seaborn
+- Matplotlib
 
-**Insights:**  
-- Model captures general price trends  
-- Minor deviations occur during high volatility periods  
+## 🔍 Steps Performed
 
----
+- Loaded dataset using seaborn
+- Inspected dataset structure
+- Generated scatter plots
+- Created histograms
+- Generated box plots
+- Saved visualizations
 
-### Task 3 – Heart Disease Prediction
-**Objective:** Predict risk of heart disease using patient health data.  
+## 📈 Output
 
-**Key Steps:**  
-- Load dataset (`heart.csv`)  
-- Handle missing values:  
-  - Numeric → median  
-  - Categorical → mode  
-- Encode categorical features using LabelEncoder  
-- Create binary target column (`target`) from original `num` column  
-- Perform EDA:  
-  - Target distribution plot  
-  - Correlation heatmap  
-- Split dataset into training and testing sets  
-- Train Logistic Regression model  
-- Evaluate model:  
-  - Accuracy  
-  - Confusion Matrix  
-  - ROC-AUC score  
-- Visualize ROC curve & feature importance  
+- Feature distribution plots
+- Outlier detection plots
+- Species comparison plots
 
-**Insights:**  
-- Accuracy ~0.80  
-- ROC-AUC ~0.87  
-- Key features: cp, thal, ca, oldpeak  
+## 📊 Insights
+
+- Setosa species is clearly separable
+- Petal features are strong predictors
 
 ---
 
-## 🚀 How to Run
+# 📈 Task 2 – Stock Price Prediction
 
-1. **Clone repository**
-```bash
-git clone https://github.com/<your-username>/AI-ML-Internship-Tasks.git
+## 🎯 Goal
+
+Predict next-day stock closing prices using historical stock data.
+
+## 🧠 Skills Learned
+
+- Time series data handling
+- Regression modeling
+- Feature engineering
+- Model evaluation
+
+## 🛠 Tools Used
+
+- Python
+- Pandas
+- yfinance
+- Scikit-learn
+- Matplotlib
+
+## 🔍 Steps Performed
+
+- Loaded stock data using yfinance
+- Created input features
+- Created prediction target
+- Trained Linear Regression model
+- Evaluated model performance
+- Visualized predictions
+
+## 📈 Output
+
+- Actual vs predicted price plots
+- Prediction trend visualization
+
+## 📊 Insights
+
+- Model predicts trends effectively
+- Minor errors during high volatility
+
+---
+
+# ❤️ Task 3 – Heart Disease Prediction
+
+## 🎯 Goal
+
+Predict whether a patient is at risk of heart disease using health data.
+
+## 🧠 Skills Learned
+
+- Data preprocessing
+- Feature engineering
+- Classification modeling
+- Model evaluation metrics
+- Medical dataset analysis
+
+## 🛠 Tools Used
+
+- Python
+- Pandas
+- Seaborn
+- Scikit-learn
+- Logistic Regression
+
+## 🔍 Steps Performed
+
+- Loaded heart disease dataset
+- Cleaned missing values
+- Encoded categorical features
+- Split data into training and testing
+- Trained Logistic Regression model
+- Evaluated model using:
+
+  - Accuracy
+  - Confusion Matrix
+  - ROC-AUC score
+
+## 📈 Output
+
+- ROC curve
+- Feature importance plot
+- Correlation heatmap
+
+## 📊 Results
+
+- Accuracy: ~80%
+- ROC-AUC: ~87%
+- Important features identified
+
+---
+
+# 🤖 Task 4 – General Health Query Chatbot (LLM Based)
+
+## 🎯 Goal
+
+Build an AI chatbot that answers general health-related questions safely using an LLM.
+
+## 🧠 Skills Learned
+
+- Prompt engineering
+- LLM integration
+- Agent architecture
+- Safety filtering
+- Conversational AI development
+
+## 🛠 Tools Used
+
+- Python
+- OpenAI Agents SDK
+- Gemini LLM
+- dotenv
+- Prompt Engineering
+
+## 🔍 Steps Performed
+
+- Configured Gemini LLM API
+- Created medical assistant agent
+- Designed prompt instructions
+- Implemented safety filter
+- Built chatbot interaction loop
+- Tested chatbot with health queries
+
+## 💬 Example Queries
+
+- What causes a sore throat?
+- What are symptoms of cold?
+- Is paracetamol safe?
+
+## 📈 Output
+
+Example interaction:
+
+You: What causes sore throat?
+
+# 🚀 How to Run
+Navigate to task folder:
+
+cd Task-4_General_Health_Query_Chatbot
 
 
-Navigate to the task folder
-
-cd Task-1_Iris_Dataset
-
-
-Create virtual environment (optional but recommended)
+Create virtual environment:
 
 python -m venv .venv
 
 
-Activate environment
+Activate environment:
 
-# Windows
+Windows:
+
 .venv\Scripts\activate
 
-# Linux / WSL
+
+Linux / WSL:
+
 source .venv/bin/activate
 
 
-Install dependencies
+Install dependencies:
 
 pip install -r requirements.txt
 
 
-Run Python script
+Run project:
 
-python main.py
+python chatbot.py
 
+---
 
-Repeat for other tasks using their respective .py files.
+# 👩‍💻 Author
 
-👩‍💻 Author
-
-Sehrish Shafiq
+**Sehrish Shafiq** 
 LinkedIn: https://www.linkedin.com/in/sehrish-shafiq
+
+---
+# ⭐ Summary
+
+This repository demonstrates my ability to:
+
+- Perform data analysis
+- Build machine learning models
+- Develop prediction systems
+- Implement AI chatbots using LLMs
+- Apply prompt engineering and safety handling
+
+These projects reflect practical implementation of AI/ML concepts.
