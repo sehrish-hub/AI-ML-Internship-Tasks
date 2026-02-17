@@ -31,6 +31,7 @@ Each task includes:
 - dotenv, os
 - Prompt Engineering
 - Streamlit (for Web UI)
+- Docker
 
 ---
 
@@ -57,6 +58,7 @@ AI-ML-Internship-Tasks/
 ├── Task-4_General_Health_Query_Chatbot/
 │ ├── chatbot.py
 │ └── README.md
+│ └──Dockerfile
 │
 └── README.md\
 
@@ -200,39 +202,67 @@ Predict whether a patient is at risk of heart disease using health data.
 
 ---
 
-🤖 Task 4 – General Health Query Chatbot (LLM Based)
-
+🤖 Task 4 – General Health Query Chatbot (LLM Based + Docker Deployment)
 🎯 Goal
-Build an AI chatbot that answers general health-related questions safely using a Large Language Model (LLM).
+
+Build an AI chatbot that answers general health-related questions safely using a Large Language Model (LLM) and can be deployed via Docker.
 
 🧠 Skills Learned
+
 Prompt engineering for safe responses
+
 LLM integration (Gemini LLM)
+
 Agent-based architecture (OpenAI Agents SDK)
+
 Safety filtering for harmful/emergency queries
+
 Conversational AI development
 
+Docker containerization and deployment
+
 🛠 Tools Used
+
 Python
+
 OpenAI Agents SDK
+
 Gemini LLM (gemini-2.5-flash)
+
 dotenv (for environment variables)
-os (secure API key access)
-Streamlit (for Web UI)
+
+os (for secure API key access)
+
+Streamlit (Web UI)
+
+Docker
 
 🔍 Steps Performed
+
 Loaded environment variables (.env) for Gemini API key
+
 Configured Gemini LLM via OpenAIChatCompletionsModel and AsyncOpenAI
-Created safety_filter() to block dangerous queries (suicide, overdose, self-harm, emergencies)
-Designed a Medical Assistant Agent with clear prompt instructions and safety rules
-Implemented ask_health_question() to handle user input safely
+
+Created safety_filter() to block dangerous queries
+
+Designed Medical Assistant Agent with clear prompt instructions
+
+Implemented ask_health_question() function to handle user input safely
+
 Built chatbot loop (CLI) and Streamlit-based web UI
-Tested chatbot with multiple health-related queries
+
+Created Dockerfile and Docker configuration for containerized deployment
+
+Tested chatbot locally with multiple health-related queries
 
 💬 Example Queries
+
 "What causes a sore throat?"
+
 "What are symptoms of common cold?"
+
 "Is paracetamol safe for children?"
+
 "How to improve immunity?"
 
 📈 Output / Interaction Example (CLI)
@@ -241,43 +271,65 @@ Type 'exit' to quit.
 
 You: What causes sore throat?
 Chatbot: A sore throat can be caused by viral infections, cold, flu, allergies, or dry air.
+
 You: exit
 Chatbot: Stay healthy! Goodbye.
 
 🌐 Streamlit UI Features
+
 Chat bubbles with user & assistant messages
-Real-time streaming responses
+
+Real-time responses
+
 Chat history maintained in session
-Friendly, professional interface
+
+Professional UI
 
 ⚠️ Safety Notes
-The chatbot does not diagnose or prescribe medicine
-Emergency or risky queries are flagged:
+
+Does not diagnose or prescribe medicine
+
+Emergency or risky queries are blocked:
+
 ⚠️ This question may require immediate medical attention. Please contact a doctor immediately.
 
 🚀 How to Run
-Navigate to the task folder:
+1️⃣ CLI / Streamlit (Local)
 cd Task-4_General_Health_Query_Chatbot
 
-Create virtual environment:
+# Create virtual environment
 python -m venv .venv
 
-Activate environment:
-Windows:
+# Activate environment
+# Windows
 .venv\Scripts\activate
-
-Linux / WSL:
+# Linux / WSL
 source .venv/bin/activate
 
-Install dependencies:
+# Install dependencies
 pip install -r requirements.txt
 
-Run the project:
-CLI Version:
+# Run CLI
 python chatbot.py
 
-Streamlit UI Version:
+# Run Streamlit UI
 streamlit run chatbot.py
+
+2️⃣ Docker Deployment
+
+Build Docker image:
+
+docker build -t health-chatbot .
+
+
+Run container:
+
+docker run -d -p 8501:8501 --env-file .env health-chatbot
+
+
+Open browser:
+
+http://localhost:8501
 
 ---
 
