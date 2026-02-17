@@ -30,6 +30,7 @@ Each task includes:
 - Gemini LLM (gemini-2.5-flash)
 - dotenv, os
 - Prompt Engineering
+- Streamlit (for Web UI)
 
 ---
 
@@ -199,80 +200,84 @@ Predict whether a patient is at risk of heart disease using health data.
 
 ---
 
-# 🤖 Task 4 – General Health Query Chatbot (LLM Based)
+🤖 Task 4 – General Health Query Chatbot (LLM Based)
 
-## 🎯 Goal
+🎯 Goal
+Build an AI chatbot that answers general health-related questions safely using a Large Language Model (LLM).
 
-Build an AI chatbot that answers general health-related questions safely using an LLM.
+🧠 Skills Learned
+Prompt engineering for safe responses
+LLM integration (Gemini LLM)
+Agent-based architecture (OpenAI Agents SDK)
+Safety filtering for harmful/emergency queries
+Conversational AI development
 
-## 🧠 Skills Learned
+🛠 Tools Used
+Python
+OpenAI Agents SDK
+Gemini LLM (gemini-2.5-flash)
+dotenv (for environment variables)
+os (secure API key access)
+Streamlit (for Web UI)
 
-- Prompt engineering
-- LLM integration
-- Agent architecture
-- Safety filtering
-- Conversational AI development
+🔍 Steps Performed
+Loaded environment variables (.env) for Gemini API key
+Configured Gemini LLM via OpenAIChatCompletionsModel and AsyncOpenAI
+Created safety_filter() to block dangerous queries (suicide, overdose, self-harm, emergencies)
+Designed a Medical Assistant Agent with clear prompt instructions and safety rules
+Implemented ask_health_question() to handle user input safely
+Built chatbot loop (CLI) and Streamlit-based web UI
+Tested chatbot with multiple health-related queries
 
-## 🛠 Tools Used
+💬 Example Queries
+"What causes a sore throat?"
+"What are symptoms of common cold?"
+"Is paracetamol safe for children?"
+"How to improve immunity?"
 
-- Python
-- OpenAI Agents SDK
-- Gemini LLM
-- dotenv
-- Prompt Engineering
-
-## 🔍 Steps Performed
-
-- Configured Gemini LLM API
-- Created medical assistant agent
-- Designed prompt instructions
-- Implemented safety filter
-- Built chatbot interaction loop
-- Tested chatbot with health queries
-
-## 💬 Example Queries
-
-- What causes a sore throat?
-- What are symptoms of cold?
-- Is paracetamol safe?
-
-## 📈 Output
-
-Example interaction:
+📈 Output / Interaction Example (CLI)
+🌸 General Health Assistant Chatbot (Gemini Powered)
+Type 'exit' to quit.
 
 You: What causes sore throat?
+Chatbot: A sore throat can be caused by viral infections, cold, flu, allergies, or dry air.
+You: exit
+Chatbot: Stay healthy! Goodbye.
 
-# 🚀 How to Run
-Navigate to task folder:
+🌐 Streamlit UI Features
+Chat bubbles with user & assistant messages
+Real-time streaming responses
+Chat history maintained in session
+Friendly, professional interface
 
+⚠️ Safety Notes
+The chatbot does not diagnose or prescribe medicine
+Emergency or risky queries are flagged:
+⚠️ This question may require immediate medical attention. Please contact a doctor immediately.
+
+🚀 How to Run
+Navigate to the task folder:
 cd Task-4_General_Health_Query_Chatbot
 
-
 Create virtual environment:
-
 python -m venv .venv
 
-
 Activate environment:
-
 Windows:
-
 .venv\Scripts\activate
 
-
 Linux / WSL:
-
 source .venv/bin/activate
 
-
 Install dependencies:
-
 pip install -r requirements.txt
 
-
-Run project:
-
+Run the project:
+CLI Version:
 python chatbot.py
+
+Streamlit UI Version:
+streamlit run chatbot.py
 
 ---
 
@@ -282,14 +287,3 @@ python chatbot.py
 LinkedIn: https://www.linkedin.com/in/sehrish-shafiq
 
 ---
-# ⭐ Summary
-
-This repository demonstrates my ability to:
-
-- Perform data analysis
-- Build machine learning models
-- Develop prediction systems
-- Implement AI chatbots using LLMs
-- Apply prompt engineering and safety handling
-
-These projects reflect practical implementation of AI/ML concepts.
