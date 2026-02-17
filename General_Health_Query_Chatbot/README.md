@@ -1,4 +1,5 @@
 ❤️ General Health Query Chatbot (Agent SDK + Gemini + Docker)
+
 📌 Overview
 The General Health Query Chatbot is an AI-powered assistant that provides safe, friendly, and general health-related information using Gemini LLM (gemini-2.5-flash) via OpenAI Agents SDK.
 
@@ -97,3 +98,4 @@ Emergency or risky queries will return:
 👩‍💻 Author
 Sehrish Shafiq
 AI Engineer | Agentic AI Developer | Python Developer
+
